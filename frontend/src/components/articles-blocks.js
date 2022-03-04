@@ -29,7 +29,7 @@ const ArticlesBlocks = ({ articles }) => {
     let next = articles[i + 1] ? getOrientation(articles[i + 1]) : "end"
     let skip = false
     let layout = (
-      <div className="portraittodd grow max-h-80 max-w-xs h-80 w-1/12 md:w-2/12 lg:w-3/12">
+      <div className="portrait grow max-h-80 max-w-xs h-80 w-1/12 md:w-2/12 lg:w-3/12">
         <ArticleBlock article={articles[i]} />
       </div>
     )
