@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import ArticlesGrid from "../components/articles-grid"
+import ArticlesBlocks from "../components/articles-blocks"
 import Seo from "../components/seo"
 import Headings from "../components/headings"
 
@@ -10,7 +10,7 @@ const IndexPage = () => {
     query {
       allStrapiArticle {
         nodes {
-          ...ArticleCard
+          ...ArticleBlock
         }
       }
       strapiGlobal {
@@ -20,6 +20,17 @@ const IndexPage = () => {
     }
   `)
 
+  /**
+   *
+   * add some logic here to rearrange articles
+   * must have two horizontal articles in succesion
+   *
+   * orrrr
+   *
+   * if only a single landscape, make full(square)
+   *
+   */
+
   return (
     <Layout>
       <Seo seo={{ metaTitle: "Home" }} />
@@ -28,7 +39,7 @@ const IndexPage = () => {
         description={strapiGlobal.siteDescription}
       />
       <main>
-        <ArticlesGrid articles={allStrapiArticle.nodes} />
+        <ArticlesBlocks articles={allStrapiArticle.nodes} />
       </main>
     </Layout>
   )
