@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---cache-dev-404-page-js",
     "path": "/dev-404-page/",
-    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/article/the-internet-s-own-boy"},{"path":"/article/this-shrimp-is-awesome"},{"path":"/article/beautiful-picture"},{"path":"/article/what-s-inside-a-black-hole"},{"path":"/article/a-bug-is-becoming-a-meme-on-the-internet"},{"path":"/about/"},{"path":"/"},{"path":"/indexWORKINGFILE/"}]}},"pageContext":{}},
+    "result": {"errors":[{"message":"Cannot read property 'id' of undefined","locations":[{"line":7,"column":3}],"path":["allSitePage"]}],"data":null,"pageContext":{}},
     "staticQueryHashes": []}
