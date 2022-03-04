@@ -29,7 +29,7 @@ const ArticlesBlocks = ({ articles }) => {
     let next = articles[i + 1] ? getOrientation(articles[i + 1]) : "end"
     let skip = false
     let layout = (
-      <div className="portrait grow max-h-80 max-w-xs h-80 w-1/12 md:w-2/12 lg:w-3/12">
+      <div className="portrait flex h-96 w-6/12 grow md:w-4/12 lg:w-2/12">
         <ArticleBlock article={articles[i]} />
       </div>
     )
@@ -38,7 +38,7 @@ const ArticlesBlocks = ({ articles }) => {
     if (curr === "landscape" && next === "landscape") {
       skip = true
       layout = (
-        <div className="landscape h-40 w-2/12 md:w-4/12 lg:w-6/12">
+        <div className="landscape flex h-96 w-8/12 grow flex-col md:w-6/12 lg:w-4/12">
           <ArticleBlock article={articles[i]} />
           <ArticleBlock article={articles[i + 1]} />
         </div>
@@ -46,7 +46,7 @@ const ArticlesBlocks = ({ articles }) => {
     }
     if (curr === "landscape" && next === "portrait") {
       layout = (
-        <div className="portrait h-40 w-2/12 md:w-4/12 lg:w-6/12">
+        <div className="square flex h-96 w-8/12 grow md:w-6/12 lg:w-4/12">
           <ArticleBlock article={articles[i]} />
         </div>
       )
@@ -61,9 +61,7 @@ const ArticlesBlocks = ({ articles }) => {
     i += layoutAll.skip
   }
 
-  return (
-    <div className="full-width flex flex-wrap">{blocks}</div>
-  )
+  return <div className="full-width flex flex-wrap">{blocks}</div>
 }
 
 export default ArticlesBlocks
