@@ -1,8 +1,8 @@
 {
-  "name": "my-gatsby-blog",
+  "name": "study-gatsby-strapi",
   "version": "1.0.4",
   "private": true,
-  "description": "Strapi Gatsby Blog",
+  "description": "Strapi Gatsby Site",
   "author": "Strapi team",
   "keywords": [
     "gatsby"
