@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.landscape {
-
+.article-tile {
+    height: 40vmax;
+    min-width: 160px;
+    max-height: 630px;
+    display: flex;
+    flex-grow: 1;
 }
 
 .portrait {
